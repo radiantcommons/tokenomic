@@ -53,7 +53,7 @@ export function PriceHistoryCard({
         <InfoCard
           title="Current Price"
           isLoading={isLoading}
-          value={priceHistoryData?.priceHistory[priceHistoryData.priceHistory.length - 1].price}
+          value={priceHistoryData?.priceHistory?.at(-1)?.price}
           valuePrefix="$"
           themeColors={secondaryThemeColors}
         />
@@ -69,7 +69,7 @@ export function PriceHistoryCard({
         <InfoCard
           title="All-Time Low"
           isLoading={isLoading}
-          value={priceHistoryData?.allTimeLow.toFixed(4)}
+          value={priceHistoryData?.allTimeLow?.toFixed(4)}
           valuePrefix="$"
           themeColors={secondaryThemeColors}
         />
